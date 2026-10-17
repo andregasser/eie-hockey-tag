@@ -1,0 +1,18 @@
+[
+  {
+    "tag": "SOPHIA_43",
+    "logo_to_name_before_mm": 2.83,
+    "logo_to_name_after_mm": 5.83,
+    "name_to_number_mm": 5.074,
+    "number_to_frame_mm": 4.504,
+    "numeral_white_area_increase_percent": 13.8
+  },
+  {
+    "tag": "JASON_4",
+    "logo_to_name_before_mm": 2.498,
+    "logo_to_name_after_mm": 5.408,
+    "name_to_number_mm": 4.578,
+    "number_to_frame_mm": 6.94,
+    "numeral_white_area_increase_percent": 12.5
+  }
+]

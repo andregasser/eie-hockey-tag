@@ -1,0 +1,32 @@
+EIE HOCKEY BAG TAGS – SOPHIA 43 UND JASON 4 – VERSION 2
+
+Enthalten:
+- EIE_SOPHIA_43_v2.3mf
+- EIE_JASON_4_v2.3mf
+- gemeinsame und einzelne Vorschauen
+
+Beide Dateien sind eigenständige Projekte für Bambu Studio.
+Name und Nummer sind fest als Geometrie eingebaut; keine Schriftinstallation erforderlich.
+Weisse Schrift mit gelber Kontur, dunkelgrüner Grund, Logo mit Schwarz als vierter Farbe.
+Die Beschriftungen sind in diesen beiden Dateien nicht mit dem Textwerkzeug parametrierbar.
+
+Abmessungen je Anhänger unverändert: 55,88 × 106,68 mm, maximale Gesamtdicke 3,96 mm.
+Namen: jeweils 44,4 mm breit (weisse Fläche); SOPHIA etwa 9,65 mm hoch, JASON etwa 10,64 mm hoch.
+Nummern: etwa 30,9 mm hoch (weisse Fläche). Neben der Vergrösserung wurden die weissen Striche gegenüber der skalierten Schrift zusätzlich um insgesamt 0,9 mm verbreitert.
+Gelbe Kontur: 0,50 mm um Namen, 0,60 mm um Nummern.
+Logo, Befestigungsschlitz und Grundform entsprechen der vorherigen Version.
+
+Öffnen und Drucken:
+1. Die gewünschte 3MF als Projekt in Bambu Studio öffnen.
+2. Drucker, Druckplatte und Materialprofil kontrollieren; diese Einstellungen stammen aus der ursprünglichen Vorlage.
+3. Filamente zuordnen: 1 Weiss, 2 Dunkelgrün, 3 Gelb, 4 Schwarz.
+4. Spülmengen neu berechnen, slicen und die Schichtvorschau prüfen. Besonders die feinen Logodetails kontrollieren.
+
+Prüfung:
+Unveränderte Gesamtmasse, geschlossene neue Schrift- und Konturbauteile und ausreichende Abstände zu Logo und Rahmen wurden geometrisch geprüft.
+Die vier Farbflächen des Logos, Grundform und Rahmen wurden unverändert übernommen.
+Bambu-Studio-Import, Slicing und ein Probedruck wurden hier nicht durchgeführt.
+
+Schriftgrundlage: College (Ziffern) und College Bold (Namen) von Matthew Welch.
+https://squaregear.net/fonts/college.html
+Die Schriftlizenz ist beigefügt. Urheber- und Lizenzmetadaten der ursprünglichen 3MF bleiben in beiden Dateien erhalten.

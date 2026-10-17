@@ -1,0 +1,16 @@
+[
+  {
+    "tag": "SOPHIA_43",
+    "logo_width_mm": 30.472,
+    "logo_height_mm": 31.043,
+    "logo_to_name_mm": 2.83,
+    "number_to_frame_mm": 4.854
+  },
+  {
+    "tag": "JASON_4",
+    "logo_width_mm": 30.472,
+    "logo_height_mm": 31.043,
+    "logo_to_name_mm": 2.498,
+    "number_to_frame_mm": 10.79
+  }
+]

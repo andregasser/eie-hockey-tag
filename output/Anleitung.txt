@@ -1,0 +1,19 @@
+EIE HOCKEY BAG TAG – TRIKOT-VARIANTE
+
+1. Vor dem Bearbeiten fonts/Graduate-Regular.ttf installieren, anschließend Bambu Studio neu starten.
+2. EIE_Hockey_Tag.3mf als Projekt öffnen.
+3. In der Objektliste die Teile Name und Number auswählen und mit dem Textwerkzeug bearbeiten.
+   Platzhalter sind NAME und 00. Bei längeren Namen Position und Größe kontrollieren.
+4. Filamente zuordnen: 1 Weiß, 2 Dunkelgrün, 3 Gelb. Ein vierter grüner Eintrag stammt aus dem ursprünglichen Profil und wird nicht verwendet.
+5. Vor dem Drucken neu slicen und die Vorschau prüfen. Drucker- und Materialeinstellungen stammen aus der Vorlage.
+
+Außenmaße unverändert: 55,88 × 106,68 mm; maximale Gesamtdicke 3,96 mm.
+Befestigungsschlitz und Rückseite sind erhalten. Das Eisfeldrelief wurde zu einer ebenen grünen Vorderseite umgestaltet.
+Name und Nummer besitzen weiterhin native text_info-Einträge für Bambu Studio.
+Graduate ist eine ähnliche College-Schrift, keine exakte Reproduktion der fotografierten Vereinsschrift.
+Gelb bildet einen separaten Rahmen; die Buchstaben selbst haben keine gelbe Kontur.
+
+Geprüft: unveränderte Gesamtabmessungen und geschlossene Netze für alle vier Bauteile.
+Nicht geprüft: Öffnen, erneutes Bearbeiten der Texte und Slicen in Bambu Studio; kein Probedruck.
+Die Farbtöne sind Annäherungen anhand der Fotos; der Druck hängt von den gewählten Filamenten ab.
+Schriftlizenz: siehe fonts/OFL.txt. Urheber- und Lizenzmetadaten der Originaldatei wurden beibehalten.

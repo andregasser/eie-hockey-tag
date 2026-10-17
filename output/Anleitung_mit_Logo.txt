@@ -1,0 +1,27 @@
+EIE HOCKEY BAG TAG – TRIKOT-VARIANTE MIT LOGO
+
+1. Vor dem Bearbeiten fonts/Graduate-Regular.ttf installieren, anschließend Bambu Studio neu starten.
+2. EIE_Hockey_Tag_mit_Logo.3mf als Projekt öffnen.
+3. In der Objektliste die Teile Name und Number auswählen und mit dem Textwerkzeug bearbeiten.
+   Platzhalter sind NAME und 00. Bei längeren Namen Position und Größe kontrollieren.
+4. Filamente zuordnen: 1 Weiß, 2 Dunkelgrün, 3 Gelb, 4 Schwarz.
+5. Spülmengen nach Farbzuordnung neu berechnen. Vor dem Drucken neu slicen und die Vorschau prüfen. Drucker- und Materialeinstellungen stammen aus der Vorlage.
+
+Außenmaße unverändert: 55,88 × 106,68 mm; maximale Gesamtdicke 3,96 mm.
+Befestigungsschlitz und Rückseite sind erhalten. Das Eisfeldrelief wurde zu einer ebenen grünen Vorderseite umgestaltet.
+Name und Nummer besitzen weiterhin native text_info-Einträge für Bambu Studio.
+Graduate ist eine ähnliche College-Schrift, keine exakte Reproduktion der fotografierten Vereinsschrift.
+Gelb bildet einen separaten Rahmen; die Buchstaben selbst haben keine gelbe Kontur.
+
+Geprüft: unveränderte Gesamtabmessungen und geschlossene Netze für die vier zusätzlichen Logo-Bauteile; unveränderte bisherige Bauteile und Textparameter; Logo innerhalb der Grundfläche und ohne Überschneidung mit Name oder Rahmen.
+Nicht geprüft: Öffnen, erneutes Bearbeiten der Texte und Slicen in Bambu Studio; kein Probedruck.
+Die Farbtöne sind Annäherungen anhand der Fotos; der Druck hängt von den gewählten Filamenten ab.
+Schriftlizenz: siehe fonts/OFL.txt. Urheber- und Lizenzmetadaten der Originaldatei wurden beibehalten.
+
+LOGO
+Das Logo sitzt zwischen Befestigungsschlitz und Name und ist aus dem Foto in vier Farbflächen nachgezeichnet.
+Größe etwa 21,8 × 22,2 mm; Reliefhöhe 0,4 mm. Die maximale Gesamtdicke des Anhängers bleibt 3,96 mm.
+Die vier Logo-Farbteile stehen in der Objektliste separat zur Verfügung.
+Die beigefügte SVG ist eine Vektorzeichnung aus dem Foto, keine offizielle Originaldatei des Vereins.
+Sehr feine Spitzen und Linien liegen teilweise unter 0,4 mm. Ihre Wiedergabe hängt von Düse und Slicer ab; in der Schichtvorschau kontrollieren.
+Zwischen den Farbflächen besteht eine geometrische Trennung von etwa 0,002 mm, unterhalb der Druckauflösung, um sich berührende Konturen sauber zu schließen.

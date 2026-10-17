@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EIE · Dein Hockey-Tag</title>
+<style>
+  :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#163c2d;background:#f3f4ef;font-synthesis:none}
+  *{box-sizing:border-box}body{margin:0}header{padding:24px 6vw;border-bottom:1px solid #d8ded4;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .brand{font-size:18px;letter-spacing:.05em;font-weight:850}.badge{background:#e0e9df;border-radius:99px;padding:6px 12px;font-size:12px}
+  main{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:55px 30px}h1{font-size:clamp(34px,4vw,50px);line-height:1.08;margin:12px 0 20px;letter-spacing:-.04em}
+  .eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:#677669}.lead{color:#637268;font-size:17px;line-height:1.6;max-width:420px}
+  form{margin-top:32px}label{display:block;font-weight:700;margin-bottom:8px}.field{margin-bottom:24px}input{width:100%;padding:15px 16px;border:1px solid #b6c4b6;background:#fff;border-radius:9px;font:inherit;font-size:20px;color:#163c2d}input:focus{outline:3px solid #f4be19;outline-offset:2px}
+  small{display:block;color:#677669;line-height:1.5;margin-top:7px}button,.download{display:block;width:100%;padding:16px;border:0;border-radius:9px;font:inherit;font-weight:750;text-align:center;text-decoration:none;cursor:pointer;background:#163e2b;color:white}button:hover{background:#24583c}button:disabled{opacity:.65;cursor:wait}.download{background:#f4be19;color:#183c2b;margin-top:12px}.download:hover{background:#e9b20e}[hidden]{display:none!important}
+  #status{min-height:28px;margin-top:14px;font-size:14px;line-height:1.5}#status.error{color:#a12626}.notes{border-top:1px solid #d8ded4;margin-top:28px;padding-top:18px;font-size:13px;color:#637268;line-height:1.7}
+  .preview{background:#e3e8df;border-radius:22px;min-height:580px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px;position:relative}.preview img{width:100%;max-width:330px;border-radius:14px}.preview figcaption{font-size:12px;color:#5f7064;text-align:center;margin-top:18px}.placeholder{text-align:center;color:#637268;padding:40px 25px}.placeholder svg{width:120px;margin-bottom:20px}.placeholder p{line-height:1.6}.preview.busy{opacity:.6}figure{margin:0}
+  @media(max-width:720px){header{padding:18px 22px}main{grid-template-columns:1fr;gap:28px;padding:28px 22px}.preview{min-height:300px}.preview img{max-width:300px}.badge{font-size:11px}h1{max-width:350px}}
+</style>
+<header><div class="brand">EIE <span style="font-weight:400">/ HOCKEY TAGS</span></div><span class="badge">Lokal auf deinem Computer</span></header>
+<main>
+  <section>
+    <div class="eyebrow">Dein Team. Dein Tag.</div>
+    <h1>Bereit für die<br>nächste Eiszeit.</h1>
+    <p class="lead">Name und Nummer eingeben. Deinen Anhänger als fertiges Projekt für Bambu Studio herunterladen.</p>
+    <form id="form">
+      <div class="field"><label for="name">Name</label><input id="name" name="name" value="SOPHIA" maxlength="24" autocomplete="off" required spellcheck="false"><small>Grossbuchstaben · Lange Namen werden passend verkleinert.<br>Ä, Ö und Ü werden als AE, OE und UE gesetzt.</small></div>
+      <div class="field"><label for="number">Nummer</label><input id="number" name="number" value="43" inputmode="numeric" pattern="[0-9]{1,2}" maxlength="2" required autocomplete="off"><small>0–99 · Eine führende Null bleibt erhalten.</small></div>
+      <button id="generate" type="submit">Tag erstellen & Vorschau anzeigen</button>
+      <div id="status" role="status" aria-live="polite"></div>
+    </form>
+    <a id="download" class="download" hidden>3MF für Bambu Studio herunterladen</a>
+    <div class="notes">55,88 × 106,68 mm · PLA · Grün, Weiss, Gelb und Schwarz<br>Die Datei als Projekt öffnen und vor dem Druck neu slicen.<br>Schrift, kräftige Ziffern und gelbe Konturen entsprechen dem freigegebenen Design.</div>
+  </section>
+  <figure class="preview" id="preview-box" aria-label="Vorschau des erstellten Tags">
+    <div class="placeholder" id="placeholder"><svg viewBox="0 0 100 160" aria-hidden="true"><rect x="3" y="3" width="94" height="154" rx="18" fill="#163e2b"/><rect x="9" y="9" width="82" height="142" rx="14" fill="none" stroke="#f4be19" stroke-width="2"/><rect x="30" y="18" width="40" height="6" rx="3" fill="#e3e8df"/><text x="50" y="77" text-anchor="middle" fill="white" font-size="24" font-weight="900">EIE</text><path d="M25 98h50M35 108h30" stroke="#f4be19" stroke-width="3"/></svg><p>Hier erscheint die Vorschau<br>deines erstellten Tags.</p></div>
+    <img id="preview" alt="" hidden>
+    <figcaption id="caption" hidden>Vorschau aus der erzeugten 3D-Geometrie.<br>Die gedruckten Farben hängen vom Filament ab.</figcaption>
+  </figure>
+</main>
+<script>
+  const form=document.getElementById('form'),nameField=document.getElementById('name'),numberField=document.getElementById('number'),status=document.getElementById('status'),button=document.getElementById('generate'),download=document.getElementById('download'),preview=document.getElementById('preview'),box=document.getElementById('preview-box');
+  let revision=0;
+  form.addEventListener('input',()=>{revision++;download.hidden=true;status.className='';status.textContent='Eingabe geändert. Bitte den Tag neu erstellen.';if(!preview.hidden)box.classList.add('busy');});
+  form.addEventListener('submit',async event=>{
+    event.preventDefault();const current=revision;
+    button.disabled=true;button.textContent='Dein Tag wird erstellt …';download.hidden=true;box.classList.add('busy');status.className='';status.textContent='Schrift und Konturen werden erstellt. Das dauert einen Moment.';
+    try{
+      const response=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json','X-Tag-Generator':'1'},body:JSON.stringify({name:nameField.value,number:numberField.value})});
+      const data=await response.json();if(!response.ok)throw new Error(data.error||'Der Tag konnte nicht erstellt werden.');
+      if(current!==revision){status.textContent='Eingabe geändert. Bitte mit den neuen Angaben nochmals erstellen.';return;}
+      nameField.value=data.report.name;numberField.value=data.report.number;
+      preview.src=data.preview;preview.alt=`Hockey-Tag für ${data.report.name}, Nummer ${data.report.number}`;preview.hidden=false;document.getElementById('placeholder').hidden=true;document.getElementById('caption').hidden=false;box.classList.remove('busy');
+      download.href=data.project;download.hidden=false;status.textContent=data.report.small_name?'Fertig. Der lange Name wurde stark verkleinert – bitte die Lesbarkeit in der Vorschau prüfen.':'Fertig. Dein Tag ist bereit für Bambu Studio.';
+    }catch(error){status.className='error';status.textContent=error.message||'Keine Verbindung zum Generator. Bitte das Startfenster prüfen.';}
+    finally{button.disabled=false;button.textContent='Tag erstellen & Vorschau anzeigen';}
+  });
+</script>
+</html>

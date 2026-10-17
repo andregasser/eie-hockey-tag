@@ -1,0 +1,22 @@
+EIE HOCKEY BAG TAGS – SOPHIA 43 UND JASON 4 – VERSION 3 – PLA
+
+Logo gegenüber Version 2 in Breite und Höhe um 40 % vergrössert.
+Neue Logogrösse: ca. 30,47 × 31,04 mm. Oberkante bleibt gleich.
+Name und Nummer jeweils um 8 mm nach unten verschoben.
+Schriftgrösse, Schriftstärke, Farben, Befestigungsschlitz und Aussenmasse unverändert.
+Abmessungen je Anhänger: 55,88 × 106,68 mm; maximale Gesamtdicke 3,96 mm.
+
+Die 3MF-Dateien als Projekte in Bambu Studio öffnen.
+Vorhandenes Profil: Bambu Lab A1, 0,4-mm-Düse, Generic PLA für alle vier Farben.
+Filamente: 1 Weiss, 2 Grün, 3 Gelb, 4 Schwarz.
+Profile der tatsächlich verwendeten Rollen auswählen, Spülmengen neu berechnen und neu slicen.
+Die grüne Filamentmarke ist noch nicht festgelegt; die Vorschau zeigt die bisherige Entwurfsfarbe.
+Name und Nummer sind feste Geometrie und nicht mit dem Textwerkzeug parametrierbar.
+
+Geometrisch geprüft: unveränderte Aussenmasse und Dicke, geschlossene veränderte
+Bauteile, vollständige Auflage und Abstände zwischen Logo, Schrift und Rahmen.
+Bambu-Studio-Import, Slicing und Probedruck wurden hier nicht durchgeführt.
+
+Schriftgrundlage: College und College Bold von Matthew Welch.
+https://squaregear.net/fonts/college.html
+Die beigefügte Schriftlizenz sowie die ursprünglichen Lizenzmetadaten bleiben erhalten.
