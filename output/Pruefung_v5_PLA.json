@@ -1,0 +1,26 @@
+[
+  {
+    "tag": "SOPHIA_43",
+    "logo_width_mm": 29.747,
+    "logo_height_mm": 31.043,
+    "logo_name_gap_mm": 5.83,
+    "source_pixel_mm": 0.06481,
+    "colour_region_iou": {
+      "7": 0.99989,
+      "9": 0.99975,
+      "8": 0.99992
+    }
+  },
+  {
+    "tag": "JASON_4",
+    "logo_width_mm": 29.747,
+    "logo_height_mm": 31.043,
+    "logo_name_gap_mm": 5.495,
+    "source_pixel_mm": 0.06481,
+    "colour_region_iou": {
+      "7": 0.99989,
+      "9": 0.99975,
+      "8": 0.99992
+    }
+  }
+]

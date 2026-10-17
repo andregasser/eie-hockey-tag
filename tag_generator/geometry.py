@@ -37,7 +37,7 @@ def clean(r):
         assert len(new) >= 3
         pts = new
 
-def extrude(shape):
+def extrude(shape, *, base=BASE, top=TOP):
     vertices = []
     triangles = []
     for poly in pieces(shape.buffer(-0.0001, join_style=2)):
@@ -50,7 +50,7 @@ def extrude(shape):
         local = []
         cap_edges = []
         cap_area = 0
-        for h in [BASE, TOP]:
+        for h in [base, top]:
             vertices.extend(((y / 1.2, h, -x / 1.1) for x, y in coords))
         for a, b, c in faces:
             u = coords[b] - coords[a]

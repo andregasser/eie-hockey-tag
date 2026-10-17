@@ -80,11 +80,11 @@ class GeometryTests(unittest.TestCase):
             self.assertEqual(main.find(T('metadata') + "[@name='Title']").text,
                              f"EIE {result['report']['name']} {result['report']['number']}")
 
-    def test_generated_text_is_closed_with_positive_volume(self):
+    def test_generated_text_and_logo_are_closed_with_positive_volume(self):
         for result in self.results.values():
             objects, files = read_project(result['project'])
             settings = ET.fromstring(files['Metadata/model_settings.config'])
-            for key in ('2', '3', '10', '11'):
+            for key in ('2', '3', '6', '7', '8', '9', '10', '11'):
                 vertices, triangles = objects[key]
                 edges = collections.Counter(tuple(sorted((a, b))) for tri in triangles
                                             for a, b in zip(tri, np.roll(tri, -1)))
@@ -96,6 +96,20 @@ class GeometryTests(unittest.TestCase):
             self.assertGreaterEqual(result['report']['logo_to_name_mm'], 5)
             self.assertGreaterEqual(result['report']['name_to_number_mm'], 3)
             self.assertGreaterEqual(result['report']['number_to_frame_mm'], 3)
+
+    def test_v5_changes_only_logo_and_preserves_depth(self):
+        for name, number in [('SOPHIA', '43'), ('JASON', '4')]:
+            before, old_files = read_project(ROOT / f'output/EIE_{name}_{number}_v4_PLA.3mf')
+            after, new_files = read_project(ROOT / f'output/EIE_{name}_{number}_v5_PLA.3mf')
+            for key in ('1', '2', '3', '5', '10', '11'):
+                np.testing.assert_array_equal(before[key][0], after[key][0])
+                np.testing.assert_array_equal(before[key][1], after[key][1])
+            for key in ('6', '7', '8', '9'):
+                np.testing.assert_allclose([before[key][0][:, 1].min(), before[key][0][:, 1].max()],
+                                           [after[key][0][:, 1].min(), after[key][0][:, 1].max()])
+                self.assertNotEqual(len(before[key][1]), len(after[key][1]))
+            self.assertEqual(old_files['Metadata/project_settings.config'], new_files['Metadata/project_settings.config'])
+            self.assertEqual(old_files['3D/3dmodel.model'], new_files['3D/3dmodel.model'])
 
     def test_digit_holes_and_independent_colours(self):
         for name, expected_holes in [('SOPHIA', 1), ('JASON', 1), ('MAX', 4),

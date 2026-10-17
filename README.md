@@ -2,7 +2,7 @@
 
 Name und Nummer eingeben, Vorschau prüfen und eine mehrfarbige **3MF-Datei für Bambu Studio** herunterladen. Der Generator läuft lokal auf dem eigenen Computer.
 
-![Freigegebenes Design](output/SOPHIA_43_JASON_4_v4_PLA_Vorschau.png)
+![Aktuelles Design mit sauberem Puck-Logo](output/SOPHIA_43_JASON_4_v5_PLA_Vorschau.png)
 
 ## Starten
 
@@ -29,13 +29,15 @@ Die Vorschau wird aus denselben Dreiecken gerendert, die in der 3MF-Datei gespei
 ## Design und Druck
 
 - Aussenmasse **55,88 × 106,68 mm**, maximale Gesamtdicke **3,96 mm**; entspricht der akzeptierten Originalgrösse.
-- Vier Farben: Weiss, Grün, Gelb, Schwarz. Die konkrete grüne Filamentrolle ist noch nicht festgelegt.
+- Vier Farben: Weiss, Grün, Gelb, Schwarz. Gewähltes Grün: **ColorFabb PLA High Speed Pro Moss Green (RAL 6005)**. Die Bildschirmfarbe ist eine Vorschau, keine Messung dieses Filaments.
 - Name: **College Bold**. Nummer: **College**, mit den zusätzlichen Verbreiterungen der freigegebenen Version 4.
 - Gelbe Kontur: 0,5 mm beim Namen, 0,6 mm bei der Nummer.
 - Logo, Rahmen, Befestigungsschlitz, Basis und Druckausrichtung werden unverändert aus der Vorlage übernommen.
 - Enthaltenes Druckprofil: **Bambu Lab A1, 0,4-mm-Düse, Generic PLA** für alle vier Farben. Die tatsächlichen Filamentprofile und Spülmengen vor dem Druck prüfen.
 
 Name und Nummer werden im Generator geändert, nicht über das Textwerkzeug in Bambu Studio. Jeder Export enthält feste, farblich getrennte Geometrie. Die geometrischen Prüfungen ersetzen keinen Import-, Slicing- oder Probedrucktest in Bambu Studio.
+
+**Logo-Update v5:** Das Puck-Logo wurde aus der vom Nutzer gelieferten transparenten Grafik neu aufgebaut. Die Fotoperspektive und die fotografischen Unregelmässigkeiten entfallen. Das Seitenverhältnis der Grafik ist erhalten; Höhe, obere Position und Zentrierung entsprechen v4. Die Schriftgeometrie beider Tags bleibt identisch zu v4. Sehr feine Logo-Spitzen können bei der 0,4-mm-Düse in der Schichtvorschau vereinfacht erscheinen.
 
 ## Entwicklung und Prüfung
 
@@ -53,7 +55,8 @@ Die Tests vergleichen beide freigegebenen v4-Tags mit frisch erzeugter Geometrie
 - `tag_generator/`: eigenständiger Generator, Browseroberfläche und freigegebene 3MF-Vorlage.
 - `fonts/college/`: verwendete Schriftdateien und mitgelieferte Lizenz.
 - `tests/`: Geometrie- und Anwendungstests.
-- `output/`: bisherige Entwürfe und fertige Tag-Dateien; **v4_PLA** ist die freigegebene Gestaltung.
+- `output/`: bisherige Entwürfe und fertige Tag-Dateien; **v5_PLA** enthält das korrigierte Puck-Logo auf der freigegebenen v4-Gestaltung.
+- `logo/sources/`: die beiden gelieferten transparenten Logo-Grafiken. `python -m logo.refine_from_artwork` erzeugt daraus die v5-Tags und aktualisiert die Generator-Vorlage. Der EIE-HOCKEY-Schriftzug dient als zusätzliche Referenz; auf dem Tag bleibt das gewählte Puck-Logo.
 - `personalized/`, `typography/`, `logo/`, `build_tag.py`: Entstehungsschritte und frühere Hilfsskripte. Einzelne historische Skripte enthalten Pfade der ursprünglichen Arbeitsumgebung; der neue Generator benötigt sie nicht.
 - `profiles/`: verwendete PLA-Profilgrundlagen.
 
@@ -61,4 +64,4 @@ Die Tests vergleichen beide freigegebenen v4-Tags mit frisch erzeugter Geometrie
 
 Die mitgelieferten Schriftdateien stammen von **Matthew Welch**; die Original-Lizenz steht in [`fonts/college/license.txt`](fonts/college/license.txt).
 
-Die 3MF-Grundlage ist die vom Nutzer bereitgestellte Datei *Hockey_Bag_Tag.3mf*. Deren Metadaten nennen **printme** als Designer und **MakerWorld Exclusive License** als Lizenz. Diese Angaben bleiben in der Vorlage und den Exporten erhalten. Das EIE-Logo wurde aus der bereitgestellten Fotovorlage rekonstruiert. Für diese fremden Gestaltungselemente wird hier keine zusätzliche Nutzungslizenz erteilt.
+Die 3MF-Grundlage ist die vom Nutzer bereitgestellte Datei *Hockey_Bag_Tag.3mf*. Deren Metadaten nennen **printme** als Designer und **MakerWorld Exclusive License** als Lizenz. Diese Angaben bleiben in der Vorlage und den Exporten erhalten. Das aktuelle EIE-Logo wurde aus der bereitgestellten transparenten PNG-Grafik rekonstruiert; frühere Versionen verwendeten ein Foto. Für diese fremden Gestaltungselemente wird hier keine zusätzliche Nutzungslizenz erteilt.

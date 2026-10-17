@@ -1,0 +1,24 @@
+EIE HOCKEY BAG TAGS – VERSION 5 – PLA
+
+Das Puck-Logo wurde aus der neuen transparenten PNG-Grafik neu aufgebaut.
+Die Fotoperspektive und die unruhigen Fotokonturen sind damit ersetzt.
+Das Seitenverhältnis der neuen Vorlage bleibt erhalten; Höhe, obere Position
+und horizontale Zentrierung entsprechen der freigegebenen Version 4.
+Name, Nummer, gelbe Konturen, Befestigungsschlitz und Grundform sind unverändert.
+Abmessungen: 55,88 × 106,68 mm; maximale Gesamtdicke 3,96 mm.
+
+Die Schriftzug-Grafik EIE HOCKEY ist als Referenz im Projekt hinterlegt;
+auf den Tags bleibt das bisher gewählte Puck-Logo.
+Beide Grafiken verwenden leicht unterschiedliche Grün- und Gelbtöne.
+Für den Druck bleiben es vier Filamente: Weiss, Grün, Gelb und Schwarz.
+Gewähltes Grün: ColorFabb PLA High Speed Pro Moss Green (RAL 6005).
+Bildschirmfarben sind eine Vorschau, keine Messung des gedruckten Filaments.
+
+3MF in Bambu Studio als Projekt öffnen, Filamente zuordnen und neu slicen.
+Die feinen Logo-Spitzen in der Schichtvorschau prüfen; sehr feine Details
+können bei einer 0,4-mm-Düse vereinfacht werden.
+Profil: Bambu Lab A1 / 0,4 mm / Generic PLA. Druckparameter gegenüber v4 unverändert.
+Geometrie und Farbübergänge geprüft; kein Probedruck durchgeführt.
+
+Schriften: College und College Bold, Matthew Welch; Lizenz beigefügt.
+Lizenzmetadaten der ursprünglichen 3MF bleiben erhalten.
